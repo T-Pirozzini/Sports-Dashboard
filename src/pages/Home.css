@@ -2,7 +2,7 @@
   background-image: url('../assets/hockey-bg-main.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;  
+  height: 100vh;    
 }
 .home-title {
   display: flex;
@@ -10,9 +10,32 @@
   justify-content: flex-start;
   align-items: flex-start;
   color: white;
-  font-size: 5rem;
-  margin: 180px 0px 0px 80px;
+  font-size: 4rem;
+  margin: 50px 0px 0px 80px;
 }
-.memo{
-/* justify-self: flex-start; */
+.img-container {
+  display: flex;  
+  position: relative;
+}
+.img-container > div {
+  position: relative;
+  max-width: 33.33%;  
+}
+.img-container > div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 5rem;
+  width: 100%;    
+}
+.img-container > div > p {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 1.5rem;
+  width: 100%;
 }
