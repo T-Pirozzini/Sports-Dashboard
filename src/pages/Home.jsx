@@ -1,11 +1,21 @@
 import React from 'react'
-import hockey_logo from "../assets/nan-hockey-logo.png"
+
+
+// components
+import Navbar from "../components/Navbar"
+
+// styles
+import "./Home.css"
 
 export default function Home() {
   return (
-    <div>
-      <div>Home</div>
-      <img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="logo" />
+    <div className="main-container">
+      <Navbar />
+      <div className="home-title">        
+        <div>Keeping active in Hockey</div>
+        <div>It's what we do!</div>          
+      </div>
+      
     </div>
     
   )

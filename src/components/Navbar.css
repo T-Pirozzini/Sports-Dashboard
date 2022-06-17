@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  justify-content: space-between;    
+}
+.navigation{
+  display: flex;  
+}
+.navigation > div {
+  padding: 10px;
+  margin: 100px 40px 0px 0px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.hockey-logo {
+  width: 200px;
+  margin: 30px;
+}
