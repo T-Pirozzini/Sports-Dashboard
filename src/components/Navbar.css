@@ -1,6 +1,8 @@
 .main {
   display: flex;
-  justify-content: space-between;    
+  justify-content: space-between; 
+  position: fixed;   
+  top: 0;
 }
 .navigation{
   display: flex;

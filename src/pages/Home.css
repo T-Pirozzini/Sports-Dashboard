@@ -1,7 +1,8 @@
 .main-container {
   background-image: url('../assets/hockey-bg-main.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;    
+  background-size: cover; 
+  height: 100vh;   
 }
 
 .home-title {
@@ -11,13 +12,15 @@
   align-items: flex-start;
   color: white;
   font-size: 4rem;
-  margin: 50px 0px 0px 80px; 
-  
+  margin: 0px 0px 0px 80px;  
+}
+.home-title > div {
+  margin-top: 400px;
 }
 .img-container {
   display: flex;  
   position: relative;
-  margin-top: 600px;  
+  margin-top: 400px;  
 }
 .img-container > div {
   display: flex;
