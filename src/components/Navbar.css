@@ -3,16 +3,23 @@
   justify-content: space-between;    
 }
 .navigation{
-  display: flex;  
-  background-color: rgba(0, 0, 0, 0.802);
+  display: flex;
+  justify-content: space-around;
+  align-items:center;  
+  background-color: rgba(0, 0, 0, 0.802);  
 }
 .navigation > div {
   padding: 5px;
-  margin: 100px 40px 0px 40px;
   color: white;
-  font-size: 1.8rem;  
+  font-size: 1.8rem;
+  padding: 2.5rem;
+  transition: color 0.2s ease;  
+}
+.navigation > div:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.372);
 }
 .hockey-logo {
   width: 200px;
-  margin: 20px;
+  /* margin: 20px; */
 }
