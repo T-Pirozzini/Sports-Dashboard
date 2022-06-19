@@ -8,16 +8,21 @@
   display: flex;
   justify-content: space-around;
   align-items:center;  
-  background-color: rgba(0, 0, 0, 0.802);  
+  background-color: rgba(0, 0, 0, 0.802);    
 }
-.navigation > div {
+.navigation > li {
   padding: 5px;
   color: white;
   font-size: 1.8rem;
   padding: 2.5rem;
-  transition: color 0.2s ease;  
+  transition: color 0.2s ease;
+  list-style: none;  
 }
-.navigation > div:hover {
+a {
+  color: white;
+  text-decoration: none;  
+}
+a:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.372);
 }

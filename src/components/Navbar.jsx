@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // styles
 import './Navbar.css'
@@ -7,20 +8,17 @@ import './Navbar.css'
 import hockey_logo from "../assets/nan-hockey-logo.png"
 
 export default function Navbar() {
-  return (
-    <div>
-      <nav className="main">
-        
-        <div className="navigation">
-          <div>NEWS</div>
-          <div>DIVISIONS</div>          
-          <div>SPARE BOARD & REGISTRATION</div>
+  return (    
+      <nav className="main">       
+        <ul className="navigation">
+          <li>NEWS</li>
+          <li ><Link class="test" to="/divisions">DIVISIONS</Link></li>          
+          <li>SPARE BOARD & REGISTRATION</li>
           <img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" />
-          <div>LEAGUE & SOCIETY</div>
-          <div>REFEREES SECTION</div>
-          <div>SUSPENSIONS</div>
-        </div>      
-      </nav>
-    </div>    
+          <li>LEAGUE & SOCIETY</li>
+          <li>REFEREES SECTION</li>
+          <li>SUSPENSIONS</li>
+        </ul>      
+      </nav>       
   )
 }
