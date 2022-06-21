@@ -1,12 +1,16 @@
 import React from 'react'
 
+// images
+import hockey_logo from "../assets/nan-hockey-logo.png"
+
 // styles
 import './Divisions.css'
 
 export default function Divisions() {
   return (
-    <div>      
-      <table>            
+    <div>
+      <div className="table-container">     
+      <table >            
         <caption>Team Representatives</caption>
         <thead>
           <tr>
@@ -73,6 +77,9 @@ export default function Divisions() {
           </tr>
         </tbody>
       </table>
+      </div> 
+               
+      
     </div>
   )
 }
