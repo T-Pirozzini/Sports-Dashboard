@@ -1,0 +1,37 @@
+.img-container {
+  display: flex;  
+  position: absolute;
+  margin-bottom: 400px;  
+}
+.img-container > div {
+  display: flex;
+  justify-content: center;  
+  position: relative;
+}
+.img-container > div > img {  
+  filter: brightness(50%);
+  transition: filter 0.5s ease;   
+  width: 100%;
+}
+.img-container > div > img:hover {
+  filter: brightness(40%);
+  cursor: pointer;
+}
+.img-container > div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 5rem;
+  width: 100%;    
+}
+.img-container > div > p {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 1.5rem;
+  width: 100%;
+}

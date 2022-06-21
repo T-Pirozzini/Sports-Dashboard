@@ -3,7 +3,7 @@ import React from 'react'
 
 // components
 import ImageLinks from "../components/ImageLinks"
-import Footer from "../components/Footer"
+
 
 // styles
 import "./Home.css"
@@ -16,8 +16,7 @@ export default function Home() {
           <div>Keeping active in Hockey<br></br> It's what we do!</div>                 
         </div>
       </div>
-      <ImageLinks />
-      <Footer />      
+      <ImageLinks />            
     </div>
     
   )

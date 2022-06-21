@@ -7,6 +7,7 @@ import Divisions from "./pages/Divisions"
 
 // components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             {/* <Login /> */}
           {/* </Route> */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -5,6 +5,9 @@ import latest_news from "../assets/latest-news.jpeg"
 import divisions from "../assets/divisions.jpeg"
 import league_society from "../assets/league-society.jpeg"
 
+// styles
+import './ImageLinks.css'
+
 export default function ImageLinks() {
   return (
     <div>

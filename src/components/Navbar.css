@@ -8,7 +8,8 @@
   display: flex;
   justify-content: space-around;
   align-items:center;  
-  background-color: rgba(0, 0, 0, 0.802);    
+  background-color: rgba(0, 0, 0, 0.802); 
+  margin: 0px;    
 }
 .navigation > li {
   padding: 5px;
@@ -16,7 +17,7 @@
   font-size: 1.8rem;
   padding: 2.5rem;
   transition: color 0.2s ease;
-  list-style: none;  
+  list-style: none;   
 }
 a {
   color: white;
@@ -27,6 +28,5 @@ a:hover {
   color: rgba(255, 255, 255, 0.372);
 }
 .hockey-logo {
-  width: 200px;
-  /* margin: 20px; */
+  width: 200px;  
 }

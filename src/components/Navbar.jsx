@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav className="main">       
         <ul className="navigation">
           <li>NEWS</li>
-          <li ><Link class="test" to="/divisions">DIVISIONS</Link></li>          
+          <li ><Link to="/divisions">DIVISIONS</Link></li>          
           <li>SPARE BOARD & REGISTRATION</li>
           <img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" />
           <li>LEAGUE & SOCIETY</li>
