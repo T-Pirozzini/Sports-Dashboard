@@ -1,7 +1,6 @@
 import React from 'react'
 
 // images
-import hockey_logo from "../assets/nan-hockey-logo.png"
 import landlubber from "../assets/landlubber.png"
 import longwood from "../assets/longwood.png"
 import quarterway from "../assets/Quarterway.png"
@@ -12,10 +11,16 @@ import white_sails from "../assets/white-sails.png"
 import './Divisions.css'
 
 export default function Divisions() {
+
+  const sayClick = (e) => {
+    console.log("click")
+    console.log(e.target.value)
+  } 
+
   return (
     <div>
-      <div className="container-main">
-        <div className="division-container">
+      <div className="container-main" >
+        <div className="division-container" onClick={sayClick}>
           <div className="landlubber">
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>
@@ -33,11 +38,9 @@ export default function Divisions() {
             <p>WHITE SAILS BREWING DIVISION (55+)</p>
           </div>
         </div>
-        <div className="table-container">
-          <table>            
-            <caption>Team Representatives</caption>           
-              <tr>     
-              <table>                
+        <div className="table-container">                         
+          <table>                        
+            <tbody>               
               <tr>
                 <th className="rec">REC A</th>        
               </tr>
@@ -70,12 +73,12 @@ export default function Divisions() {
                 <td>Cole Maberley</td>
                 <td>(517)888-7094</td>
                 <td>cmaberley@rocketmail.com</td>
-              </tr>              
-              </table>
               </tr>
-
-              <tr>
-                <table>
+            </tbody>               
+          </table>               
+        
+          <table>
+            <tbody>
               <tr>
                 <th className="rec">REC B</th>        
               </tr>
@@ -109,15 +112,11 @@ export default function Divisions() {
                 <td>(517)888-7094</td>
                 <td>cmaberley@rocketmail.com</td>
               </tr>
-
-  </table>
-</tr>
-              
+            </tbody>
+          </table>                          
             
-          </table>
-        </div>
-      </div>      
-      
-    </div>
+          </div>
+        </div>      
+      </div>
   )
 }

@@ -8,7 +8,8 @@ import league_society from "../assets/league-society.jpeg"
 // styles
 import './ImageLinks.css'
 
-export default function ImageLinks() {
+export default function ImageLinks() {  
+
   return (
     <div>
       {/* image links */}
