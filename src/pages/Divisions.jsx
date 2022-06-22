@@ -11,29 +11,25 @@ import white_sails from "../assets/white-sails.png"
 import './Divisions.css'
 
 export default function Divisions() {
-  const [selected, setSelected] = useState(false)
-
-  const markSelected = () => {    
-      setSelected(current => !current)
-  }     
+  
 
   return (
     <div>
       <div className="container-main" >
         <div className="division-container" >
-          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
+          <div onClick={(e) => e.target.classList.toggle('selected')} >
             <img src={landlubber}></img>
-            <p>LANDLUBBER PUB DIVISION (REC)</p>
+            <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
-          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
+         <div className='quarterway' onClick={(e) => e.target.classList.toggle('selected')}>
             <img src={quarterway}></img>
-            <p>QUARTERWAY PUB DIVISION (30+)</p>
+            <p>QUARTERWAY PUB DIVISION (30+)</p>                       
           </div>
-          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
+          <div className='longwood' onClick={(e) => e.target.classList.toggle('selected')}>
             <img src={longwood}></img>
             <p>LONGWOOD BREW PUB DIVISION (45+)</p>
           </div>
-          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
+          <div className='white-sails' onClick={(e) => e.target.classList.toggle('selected')}>
             <img src={white_sails}></img>         
             <p>WHITE SAILS BREWING DIVISION (55+)</p>
           </div>
