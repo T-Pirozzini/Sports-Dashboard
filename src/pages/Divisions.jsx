@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 // images
 import landlubber from "../assets/landlubber.png"
@@ -11,29 +11,29 @@ import white_sails from "../assets/white-sails.png"
 import './Divisions.css'
 
 export default function Divisions() {
+  const [selected, setSelected] = useState(false)
 
-  const sayClick = (e) => {
-    console.log("click")
-    console.log(e.target.value)
-  } 
+  const markSelected = () => {    
+      setSelected(current => !current)
+  }     
 
   return (
     <div>
       <div className="container-main" >
-        <div className="division-container" onClick={sayClick}>
-          <div className="landlubber">
+        <div className="division-container" >
+          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>
           </div>
-          <div className="quarterway">
+          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
             <img src={quarterway}></img>
             <p>QUARTERWAY PUB DIVISION (30+)</p>
           </div>
-          <div className="longwood">
+          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
             <img src={longwood}></img>
             <p>LONGWOOD BREW PUB DIVISION (45+)</p>
           </div>
-          <div className="white-sails">
+          <div className={selected ? 'selected' : 'unselected'} onClick={markSelected}>
             <img src={white_sails}></img>         
             <p>WHITE SAILS BREWING DIVISION (55+)</p>
           </div>

@@ -1,7 +1,6 @@
 .img-container {
   display: flex;  
-  position: absolute;
-  margin-bottom: 400px;  
+  position: relative;  
 }
 .img-container > div {
   display: flex;
