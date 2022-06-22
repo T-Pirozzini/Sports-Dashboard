@@ -11,25 +11,30 @@ import white_sails from "../assets/white-sails.png"
 import './Divisions.css'
 
 export default function Divisions() {
+  const [selected, setSelected] = useState('unselected')
   
+  
+  const handleClick = (e) => {    
+    e.currentTarget.classList.toggle('selected')
+  }
 
   return (
     <div>
       <div className="container-main" >
         <div className="division-container" >
-          <div onClick={(e) => e.target.classList.toggle('selected')} >
+          <div className='landlubber' onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
-         <div className='quarterway' onClick={(e) => e.target.classList.toggle('selected')}>
+         <div className='quarterway' onClick={(e) => e.currentTarget.classList.toggle('selected')}>
             <img src={quarterway}></img>
             <p>QUARTERWAY PUB DIVISION (30+)</p>                       
           </div>
-          <div className='longwood' onClick={(e) => e.target.classList.toggle('selected')}>
+          <div className='longwood' onClick={(e) => e.currentTarget.classList.toggle('selected')}>
             <img src={longwood}></img>
             <p>LONGWOOD BREW PUB DIVISION (45+)</p>
           </div>
-          <div className='white-sails' onClick={(e) => e.target.classList.toggle('selected')}>
+          <div className='white-sails' onClick={(e) => e.currentTarget.classList.toggle('selected')}>
             <img src={white_sails}></img>         
             <p>WHITE SAILS BREWING DIVISION (55+)</p>
           </div>
