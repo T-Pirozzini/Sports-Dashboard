@@ -9,7 +9,7 @@ import hockey_logo from "../assets/nan-hockey-logo.png"
 
 export default function Navbar() {
   return (    
-      <nav className="main">       
+      <nav className="main-nav">       
         <ul className="navigation">
           <li>NEWS</li>
           <li ><Link to="/divisions">DIVISIONS</Link></li>          

@@ -21,7 +21,7 @@ export default function Divisions() {
   return (
     <div>
       <div className="container-main" >
-        <div className="division-container" >
+        <div className="division-container">
           <div className='landlubber' onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            

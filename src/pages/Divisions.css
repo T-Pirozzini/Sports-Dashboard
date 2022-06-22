@@ -17,7 +17,7 @@
   justify-content: center;  
   align-items: center;
 }
-img {
+.division-container > div > img {
   width: 40%;
   padding-top: 20px;
 }

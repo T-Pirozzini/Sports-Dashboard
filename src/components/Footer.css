@@ -1,8 +1,12 @@
-.footer-container {  
-  width: 100%;
+.footer-main {
+  position: relative;
+  bottom: 0;
+  width: 100%;  
+}
+.footer-container {    
   display: flex;
   justify-content: space-around; 
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(12, 12, 12);  
 }
 .footer-container > ul {
   list-style: none;
