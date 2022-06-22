@@ -22,6 +22,6 @@ li:hover {
   color: rgba(255, 255, 255, 0.372);
   cursor: pointer;
 }
-li:nth-child(1) {
+.footer-container > ul > li:nth-child(1) {
   color: rgba(255, 255, 255, 0.372);
 }

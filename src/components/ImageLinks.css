@@ -8,11 +8,12 @@
   justify-content: space-between;
   gap: 2rem;      
 }
-.img-container > div {
-  display: flex;
-  justify-content: center;  
+.img-container > div {  
   position: relative;
-  transition: all .5s;  
+  transition: all .5s; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
 }
 .img-container > div:hover {
   filter: brightness(150%);
@@ -24,20 +25,16 @@
   border-radius: 15px;  
   filter: brightness(60%); 
 }
-.img-container > div > div {
-  position: absolute;  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.img-container > div > div {  
+  position: absolute; 
   color: white; 
-  font-size: 5rem;     
+  font-size: 3vw;  
+  text-align: center;
 }
-.img-container > div > p {
+.img-container > div > p {  
   position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white; 
-  font-size: 1.5rem;
-  width: contain;
+  font-size: 1vw;
+  text-align: center; 
+  align-self: flex-end; 
 }

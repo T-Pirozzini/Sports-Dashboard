@@ -17,7 +17,7 @@ export default function ImageLinks() {
         <div className="img-container">
           <div className="latest-news-div">
             <img src={latest_news} alt="Latest News" className="latest-news-img"/>
-            <div className="img-text">Latest News</div>          
+            <div className="img-text">LATEST NEWS</div>          
           </div>        
           <div className="divisions-div">
             <img src={divisions} alt="Divisions" className="divisions-img" />
