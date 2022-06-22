@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useCollection } from '../hooks/useCollection'
 
 // images
 import landlubber from "../assets/landlubber.png"
@@ -6,13 +7,18 @@ import longwood from "../assets/longwood.png"
 import quarterway from "../assets/Quarterway.png"
 import white_sails from "../assets/white-sails.png"
 
+// components
+import EntryForm from '../components/EntryForm'
+import EntryList from '../components/EntryList'
+
 
 // styles
 import './Divisions.css'
 
 export default function Divisions() {
+  const { documents: entries } = useCollection('divisions')
   const [selected, setSelected] = useState('unselected')
-  
+  console.log('ENTRIES', entries)
   
   const handleClick = (e) => {  
     e.currentTarget.classList.toggle('selected')     
@@ -51,12 +57,7 @@ export default function Divisions() {
                 <th>Cell</th>
                 <th>Email</th>
               </tr>
-              <tr>
-                <td>Canadiens</td>
-                <td>Mike Hrabowych</td>
-                <td>(250)714-6101</td>
-                <td>mike.hrabowych.com</td>
-              </tr>
+              {entries && <EntryList entries={entries} />} 
               <tr>
                 <td>Crabbers</td>
                 <td>Cole Maberley</td>
@@ -114,8 +115,8 @@ export default function Divisions() {
                 <td>cmaberley@rocketmail.com</td>
               </tr>
             </tbody>
-          </table>                          
-            
+          </table>                                     
+            <EntryForm />
           </div>
         </div>      
       </div>
