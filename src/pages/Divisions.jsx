@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useCollection } from '../hooks/useCollection'
 
 // images
@@ -24,27 +24,31 @@ export default function Divisions() {
   const { documents: landlubberB } = useCollection('landlubberB')
   const { documents: quarterwayA } = useCollection('landlubberA')
   const { documents: quarterwayB } = useCollection('landlubberB')
-  const [selected, setSelected] = useState(1)
-  const [division, setDivision] = useState('')  
+  const [selected, setSelected] = useState(0)
+  const [division, setDivision] = useState('landlubber')   
   
-  const handleClick = (e) => { 
-    console.log('CurrentName', e.currentTarget.className[0])     
+  useEffect(() => {
+    console.log('The Division is now: ', division)
+    console.log('The Selection is now: ', selected)
+  },[division])
+
+  const handleClick = (e) => {     
+    let num = e.currentTarget.className[0]
+    setSelected(num)
     e.currentTarget.classList.toggle('selected')    
-    setSelected(e.currentTarget.className[0])
-    console.log('SELECTED', selected)
-    if (selected == 1) {
+    
+    if (num == 1) {
       setDivision('landlubber')  
     }
-    if (selected == 2) {
+    if (num == 2) {
       setDivision('quarterway')  
     }
-    if (selected == 3) {
+    if (num == 3) {
       setDivision('longwood')  
     }
-    if (selected == 4) {
-      setDivision('white sails')  
-    }    
-    console.log('DIVISION', division)
+    if (num == 4) {
+      setDivision('whitesails')  
+    }   
   }
 
   return (

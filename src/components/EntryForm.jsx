@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // firebase imports
 import { db } from '../firebase/config'
@@ -9,13 +9,16 @@ export default function EntryForm({ division }) {
   const [ newTeam, setNewTeam] = useState('')
   const [ newRep, setNewRep] = useState('')
   const [ newCell, setNewCell] = useState('')
-  const [ newEmail, setNewEmail] = useState('')
+  const [ newEmail, setNewEmail] = useState('') 
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('TEST', {division} + {newRec})  // How to combine two variables
+    let strDivision = JSON.stringify(division)    
+    let strNewRec = JSON.stringify(newRec)    
+    let combined = strDivision.concat(strNewRec)
+    let divisionRec = combined.replace(/['"]+/g, '')    
     if (newRec == 'A') {      
-      await addDoc(collection(db, {division}+{newRec}), {
+      await addDoc(collection(db, divisionRec), {
         team: newTeam,
         rep: newRep,
         cell: newCell,
@@ -24,7 +27,7 @@ export default function EntryForm({ division }) {
       })
     }
     if (newRec == 'B') {      
-      await addDoc(collection(db, 'landlubberB'), {
+      await addDoc(collection(db, divisionRec), {
         team: newTeam,
         rep: newRep,
         cell: newCell,
@@ -32,8 +35,7 @@ export default function EntryForm({ division }) {
         rec: newRec 
       })    
     }
-    // reset form fields
-    setNewRec('')  
+    // reset form fields      
     setNewTeam('')
     setNewRep('')
     setNewCell('')
