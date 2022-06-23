@@ -9,16 +9,17 @@ import white_sails from "../assets/white-sails.png"
 
 // components
 import EntryForm from '../components/EntryForm'
-import EntryList from '../components/EntryList'
-
+import LandlubberA from '../components/LandlubberA'
+import LandlubberB from '../components/LandlubberB'
 
 // styles
 import './Divisions.css'
 
 export default function Divisions() {
-  const { documents: entries } = useCollection('divisions')
+  const { documents: landlubberA } = useCollection('landlubberA')
+  const { documents: landlubberB } = useCollection('landlubberB')
   const [selected, setSelected] = useState('unselected')
-  console.log('ENTRIES', entries)
+  console.log('ENTRIES', landlubberA)
   
   const handleClick = (e) => {  
     e.currentTarget.classList.toggle('selected')     
@@ -57,7 +58,9 @@ export default function Divisions() {
                 <th>Cell</th>
                 <th>Email</th>
               </tr>
-              {entries && <EntryList entries={entries} />} 
+              {landlubberA && <LandlubberA
+              landlubberA={landlubberA}
+               />} 
               <tr>
                 <td>Crabbers</td>
                 <td>Cole Maberley</td>
@@ -90,6 +93,9 @@ export default function Divisions() {
                 <th>Cell</th>
                 <th>Email</th>
               </tr>
+              {landlubberB && <LandlubberB
+              landlubberB={landlubberB}
+               />} 
               <tr>
                 <td>Crabbers</td>
                 <td>Cole Maberley</td>
