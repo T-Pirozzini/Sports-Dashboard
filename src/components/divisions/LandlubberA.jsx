@@ -1,11 +1,10 @@
 import React from 'react'
 
 // firebase imports
-import { db } from '../firebase/config'
+import { db } from '../../firebase/config'
 import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function LandlubberA({ landlubberA }) {
- console.log('LandlubberA', landlubberA) 
+export default function LandlubberA({ landlubberA }) {  
 
  const handleClick = async (id) => {
   const docRef = doc(db, 'landlubberA', id)

@@ -9,8 +9,8 @@ import white_sails from "../assets/white-sails.png"
 
 // components
 import EntryForm from '../components/EntryForm'
-import LandlubberA from '../components/LandlubberA'
-import LandlubberB from '../components/LandlubberB'
+import LandlubberA from '../components/divisions/LandlubberA'
+import LandlubberB from '../components/divisions/LandlubberB'
 
 // styles
 import './Divisions.css'
@@ -19,17 +19,18 @@ export default function Divisions() {
   const { documents: landlubberA } = useCollection('landlubberA')
   const { documents: landlubberB } = useCollection('landlubberB')
   const [selected, setSelected] = useState('unselected')
-  console.log('ENTRIES', landlubberA)
+  const [division, setDivision] = useState('landlubber')  
   
-  const handleClick = (e) => {  
-    e.currentTarget.classList.toggle('selected')     
+  const handleClick = (e) => {      
+    e.currentTarget.classList.toggle('selected')
+    setDivision(e.currentTarget.className)         
   }
 
   return (
     <div>
       <div className="container-main" >
         <div className="division-container">
-          <div className={selected} onClick={(e) => handleClick(e)} >
+          <div className='landlubber' onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
@@ -47,7 +48,7 @@ export default function Divisions() {
           </div>
         </div>
         <div className="table-container">                         
-          <table>                        
+          {division === 'landlubber' && <table className='landlubber-table'>                        
             <tbody>               
               <tr>
                 <th className="rec">REC A</th>        
@@ -60,29 +61,11 @@ export default function Divisions() {
               </tr>
               {landlubberA && <LandlubberA
               landlubberA={landlubberA}
-               />} 
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
+               />}
             </tbody>               
-          </table>               
+          </table> }              
         
-          <table>
+          {division === 'landlubber' && <table>
             <tbody>
               <tr>
                 <th className="rec">REC B</th>        
@@ -95,34 +78,10 @@ export default function Divisions() {
               </tr>
               {landlubberB && <LandlubberB
               landlubberB={landlubberB}
-               />} 
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
-              <tr>
-                <td>Crabbers</td>
-                <td>Cole Maberley</td>
-                <td>(517)888-7094</td>
-                <td>cmaberley@rocketmail.com</td>
-              </tr>
+               />}              
             </tbody>
-          </table>                                     
-            <EntryForm />
+          </table>}                                
+          <EntryForm />
           </div>
         </div>      
       </div>
