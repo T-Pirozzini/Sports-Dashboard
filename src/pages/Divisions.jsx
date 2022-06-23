@@ -15,6 +15,10 @@ import LandlubberA from '../components/divisions/LandlubberA'
 import LandlubberB from '../components/divisions/LandlubberB'
 import QuarterwayA from '../components/divisions/QuarterwayA'
 import QuarterwayB from '../components/divisions/QuarterwayB'
+import LongwoodA from '../components/divisions/LongwoodA'
+import LongwoodB from '../components/divisions/LongwoodB'
+import WhitesailsA from '../components/divisions/WhitesailsA'
+import WhitesailsB from '../components/divisions/WhitesailsB'
 
 // styles
 import './Divisions.css'
@@ -22,14 +26,18 @@ import './Divisions.css'
 export default function Divisions() {
   const { documents: landlubberA } = useCollection('landlubberA')
   const { documents: landlubberB } = useCollection('landlubberB')
-  const { documents: quarterwayA } = useCollection('landlubberA')
-  const { documents: quarterwayB } = useCollection('landlubberB')
+  const { documents: quarterwayA } = useCollection('quarterwayA')
+  const { documents: quarterwayB } = useCollection('quarterwayB')
+  const { documents: longwoodA } = useCollection('longwoodA')
+  const { documents: longwoodB } = useCollection('longwoodB')
+  const { documents: whitesailsA } = useCollection('whitesailsA')
+  const { documents: whitesailsB } = useCollection('whitesailsB')
   const [selected, setSelected] = useState(0)
   const [division, setDivision] = useState('landlubber')   
   
   useEffect(() => {
-    console.log('The Division is now: ', division)
-    console.log('The Selection is now: ', selected)
+    // console.log('The Division is now: ', division)
+    // console.log('The Selection is now: ', selected)
   },[division])
 
   const handleClick = (e) => {     
@@ -139,7 +147,76 @@ export default function Divisions() {
               quarterwayB={quarterwayB}
                />}              
             </tbody>
-          </table>}                               
+          </table>}
+
+          {division === 'longwood' && <table className='longwood-table'>
+            <tbody>
+              <tr>
+                <th className="rec">REC A</th>        
+              </tr>
+              <tr>
+                <th>Team</th>
+                <th>Team Rep</th>
+                <th>Cell</th>
+                <th>Email</th>
+              </tr>
+              {longwoodA && <LongwoodA
+              longwoodA={longwoodA}
+               />}              
+            </tbody>
+          </table>} 
+
+          {division === 'longwood' && <table className='longwood-table'>
+            <tbody>
+              <tr>
+                <th className="rec">REC B</th>        
+              </tr>
+              <tr>
+                <th>Team</th>
+                <th>Team Rep</th>
+                <th>Cell</th>
+                <th>Email</th>
+              </tr>
+              {longwoodB && <LongwoodB
+              longwoodB={longwoodB}
+               />}              
+            </tbody>
+          </table>}
+
+          {division === 'whitesails' && <table className='whitesails-table'>
+            <tbody>
+              <tr>
+                <th className="rec">REC A</th>        
+              </tr>
+              <tr>
+                <th>Team</th>
+                <th>Team Rep</th>
+                <th>Cell</th>
+                <th>Email</th>
+              </tr>
+              {whitesailsA && <WhitesailsA
+              whitesailsA={whitesailsA}
+               />}              
+            </tbody>
+          </table>} 
+
+          {division === 'whitesails' && <table className='whitesails-table'>
+            <tbody>
+              <tr>
+                <th className="rec">REC B</th>        
+              </tr>
+              <tr>
+                <th>Team</th>
+                <th>Team Rep</th>
+                <th>Cell</th>
+                <th>Email</th>
+              </tr>
+              {whitesailsB && <WhitesailsB
+              whitesailsB={whitesailsB}
+               />}              
+            </tbody>
+          </table>}
+
           <EntryForm division = {division} />
           </div>
         </div>      
