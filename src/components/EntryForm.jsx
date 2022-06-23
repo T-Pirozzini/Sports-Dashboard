@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { db } from '../firebase/config'
 import { collection, addDoc } from 'firebase/firestore'
 
-export default function EntryForm() {
+export default function EntryForm({ division }) {  
   const [ newRec, setNewRec] = useState('A')
   const [ newTeam, setNewTeam] = useState('')
   const [ newRep, setNewRep] = useState('')
@@ -12,9 +12,10 @@ export default function EntryForm() {
   const [ newEmail, setNewEmail] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault()  
+    e.preventDefault()
+    console.log('TEST', {division} + {newRec})  // How to combine two variables
     if (newRec == 'A') {      
-      await addDoc(collection(db, 'landlubberA'), {
+      await addDoc(collection(db, {division}+{newRec}), {
         team: newTeam,
         rep: newRep,
         cell: newCell,
