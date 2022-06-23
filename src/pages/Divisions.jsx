@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState, useRef } from 'react'
 import { useCollection } from '../hooks/useCollection'
 
 // images
@@ -33,29 +33,34 @@ export default function Divisions() {
   const { documents: whitesailsA } = useCollection('whitesailsA')
   const { documents: whitesailsB } = useCollection('whitesailsB')
   const [selected, setSelected] = useState(0)
-  const [division, setDivision] = useState('landlubber')   
+  const [division, setDivision] = useState('landlubber')
+  const input = useRef(null)   
   
-  useEffect(() => {
-    // console.log('The Division is now: ', division)
-    // console.log('The Selection is now: ', selected)
-  },[division])
+  
 
-  const handleClick = (e) => {     
-    let num = e.currentTarget.className[0]
-    setSelected(num)
-    e.currentTarget.classList.toggle('selected')    
+  let unselected = document.querySelectorAll('.division-container > div')
+  
+
+  const handleClick = (e) => {
+    console.log('unselected', unselected)
+    let arr = Array.from(unselected)
+    arr.map(x => {
+      x.classList.remove('selected')
+    })         
+    e.currentTarget.classList.add('selected')        
     
+    let num = e.currentTarget.className[0]
     if (num == 1) {
-      setDivision('landlubber')  
+      setDivision('landlubber')      
     }
     if (num == 2) {
-      setDivision('quarterway')  
+      setDivision('quarterway')        
     }
     if (num == 3) {
-      setDivision('longwood')  
+      setDivision('longwood')        
     }
     if (num == 4) {
-      setDivision('whitesails')  
+      setDivision('whitesails')        
     }   
   }
 
@@ -63,7 +68,7 @@ export default function Divisions() {
     <div>
       <div className="container-main" >
         <div className="division-container">
-          <div className='1' onClick={(e) => handleClick(e)} >
+          <div className='1' ref={input} onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
@@ -80,8 +85,10 @@ export default function Divisions() {
             <p>WHITE SAILS BREWING DIVISION (55+)</p>
           </div>
         </div>
+        
         <div className="table-container">                         
           {division === 'landlubber' && <table className='landlubber-table'>                        
+            <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>               
               <tr>
                 <th className="rec">REC A</th>        
@@ -116,6 +123,7 @@ export default function Divisions() {
           </table>} 
 
           {division === 'quarterway' && <table className='quarterway-table'>
+            <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
               <tr>
                 <th className="rec">REC A</th>        
@@ -150,6 +158,7 @@ export default function Divisions() {
           </table>}
 
           {division === 'longwood' && <table className='longwood-table'>
+            <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
               <tr>
                 <th className="rec">REC A</th>        
@@ -184,6 +193,7 @@ export default function Divisions() {
           </table>}
 
           {division === 'whitesails' && <table className='whitesails-table'>
+            <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
               <tr>
                 <th className="rec">REC A</th>        
