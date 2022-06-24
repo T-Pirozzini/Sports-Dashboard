@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 
+// styles
+import './EntryForm.css'
+
 // firebase imports
 import { db } from '../firebase/config'
 import { collection, addDoc } from 'firebase/firestore'
@@ -43,39 +46,40 @@ export default function EntryForm({ division }) {
   }
 
   return (
-    <form className="entry-form" onSubmit={handleSubmit}>
-      <label>
-        <span>Add a new entry:</span>
-        <select onChange={(e) => setNewRec(e.target.value)}>
-          <option value='A'>Rec A</option>
-          <option value='B'>Rec B</option>
-        </select>         
-        <input
-          required
-          type='text'
-          onChange={(e) => setNewTeam(e.target.value)}
-          value={newTeam}
-        />
-        <input
-          required
-          type='text'
-          onChange={(e) => setNewRep(e.target.value)}
-          value={newRep}
-        />
-        <input
-          required
-          type='cell'
-          onChange={(e) => setNewCell(e.target.value)}
-          value={newCell}
-        />
-        <input
-          required
-          type='email'
-          onChange={(e) => setNewEmail(e.target.value)}
-          value={newEmail}
-        />
-      </label>
-      <button>Add</button>
+    <form className="entry-form" onSubmit={handleSubmit}>        
+      <select onChange={(e) => setNewRec(e.target.value)}>
+        <option value='A'>REC A</option>
+        <option value='B'>REC B</option>
+      </select>         
+      <input
+        required
+        placeholder='Team Name'
+        type='text'
+        onChange={(e) => setNewTeam(e.target.value)}
+        value={newTeam}
+      />
+      <input
+        required
+        placeholder='Team Representative'
+        type='text'
+        onChange={(e) => setNewRep(e.target.value)}
+        value={newRep}
+      />
+      <input
+        required
+        placeholder='Contact# (xxx) xxx-xxxx'
+        type='cell'
+        onChange={(e) => setNewCell(e.target.value)}
+        value={newCell}
+      />
+      <input
+        required
+        placeholder='Email'
+        type='email'
+        onChange={(e) => setNewEmail(e.target.value)}
+        value={newEmail}
+      />
+      <button>Add Team</button>
     </form>
   )
 }

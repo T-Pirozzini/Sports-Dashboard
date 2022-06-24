@@ -96,7 +96,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {landlubberA && <LandlubberA
@@ -113,7 +113,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {landlubberB && <LandlubberB
@@ -131,7 +131,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {quarterwayA && <QuarterwayA
@@ -148,7 +148,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {quarterwayB && <QuarterwayB
@@ -166,7 +166,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {longwoodA && <LongwoodA
@@ -183,7 +183,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {longwoodB && <LongwoodB
@@ -201,7 +201,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {whitesailsA && <WhitesailsA
@@ -218,7 +218,7 @@ export default function Divisions() {
               <tr>
                 <th>Team</th>
                 <th>Team Rep</th>
-                <th>Cell</th>
+                <th>Contact #</th>
                 <th>Email</th>
               </tr>
               {whitesailsB && <WhitesailsB
