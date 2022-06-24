@@ -23,6 +23,9 @@ import WhitesailsB from '../components/divisions/WhitesailsB'
 // styles
 import './Divisions.css'
 
+// context
+import { useAuthContext } from '../hooks/useAuthContext'
+
 export default function Divisions() {
   const { documents: landlubberA } = useCollection('landlubberA')
   const { documents: landlubberB } = useCollection('landlubberB')
@@ -32,14 +35,11 @@ export default function Divisions() {
   const { documents: longwoodB } = useCollection('longwoodB')
   const { documents: whitesailsA } = useCollection('whitesailsA')
   const { documents: whitesailsB } = useCollection('whitesailsB')
-  const [selected, setSelected] = useState(0)
+  
   const [division, setDivision] = useState('landlubber')
-  const input = useRef(null)   
-  
-  
+  const { user, authIsReady } = useAuthContext;  
 
   let unselected = document.querySelectorAll('.division-container > div')
-  
 
   const handleClick = (e) => {
     console.log('unselected', unselected)
@@ -68,7 +68,7 @@ export default function Divisions() {
     <div>
       <div className="container-main" >
         <div className="division-container">
-          <div className='1 selected' ref={input} onClick={(e) => handleClick(e)} >
+          <div className='1 selected' onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
@@ -86,7 +86,8 @@ export default function Divisions() {
           </div>
         </div>
         
-        <div className="table-container">                         
+        <div className="table-container">
+          {/* landlubber tables */}                         
           {division === 'landlubber' && <table className='landlubber-table'>                        
             <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>               
@@ -103,8 +104,7 @@ export default function Divisions() {
               landlubberA={landlubberA}
                />}
             </tbody>               
-          </table> }              
-        
+          </table> }          
           {division === 'landlubber' && <table className='landlubber-table'>
             <tbody>
               <tr>
@@ -120,8 +120,9 @@ export default function Divisions() {
               landlubberB={landlubberB}
                />}              
             </tbody>
-          </table>} 
+          </table>}
 
+          {/* quarterway tables */}
           {division === 'quarterway' && <table className='quarterway-table'>
             <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
@@ -138,8 +139,7 @@ export default function Divisions() {
               quarterwayA={quarterwayA}
                />}              
             </tbody>
-          </table>} 
-
+          </table>}          
           {division === 'quarterway' && <table className='quarterway-table'>
             <tbody>
               <tr>
@@ -157,6 +157,7 @@ export default function Divisions() {
             </tbody>
           </table>}
 
+          {/* longwood tables */}
           {division === 'longwood' && <table className='longwood-table'>
             <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
@@ -173,8 +174,7 @@ export default function Divisions() {
               longwoodA={longwoodA}
                />}              
             </tbody>
-          </table>} 
-
+          </table>}          
           {division === 'longwood' && <table className='longwood-table'>
             <tbody>
               <tr>
@@ -192,6 +192,7 @@ export default function Divisions() {
             </tbody>
           </table>}
 
+          {/* whitesails tables */}
           {division === 'whitesails' && <table className='whitesails-table'>
             <caption>{division.toUpperCase()} DIVISION</caption>
             <tbody>
@@ -208,8 +209,7 @@ export default function Divisions() {
               whitesailsA={whitesailsA}
                />}              
             </tbody>
-          </table>} 
-
+          </table>}           
           {division === 'whitesails' && <table className='whitesails-table'>
             <tbody>
               <tr>
