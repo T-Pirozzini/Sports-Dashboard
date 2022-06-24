@@ -1,7 +1,7 @@
 .main-nav {  
   position: fixed; 
   z-index: 1;
-  width: 100vw;  
+  width: 100%;  
   top: 0;  
 }
 .navigation{
@@ -10,13 +10,13 @@
   align-items:center;  
   background-color: rgba(0, 0, 0, 0.802); 
   margin: 0px;
-  min-width: 80vw;
+  /* min-width: 80vw; */
   height: 150px;     
 }
 .navigation > li {    
   color: white;
-  font-size: 2rem;
-  padding: 2rem;
+  font-size: 1.7vw;  
+  padding: 1vw;
   transition: color 0.2s ease;
   list-style: none;   
 }
@@ -24,16 +24,20 @@
   color: white;
   text-decoration: none;  
 }
+.navigation > li:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.372);
+}
 .navigation > li > a:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.372);
 }
 .hockey-logo {
   padding-top: 30px;
-  width: 180px;   
-  transition: .7s ease; 
+  width: 9vw;  
 }
 .hockey-logo:hover {
   transform: scale(1.1);
   cursor: pointer;
+  transition: .7s ease; 
 }

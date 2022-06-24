@@ -15,7 +15,7 @@ export default function Navbar() {
           <li><Link to="/divisions">DIVISIONS</Link></li>          
           <li>REGISTRATION</li>          
           <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>
-          <li>LEAGUE INFO</li>
+          <li>LEAGUE</li>
           <li>REFEREES</li>
           <li><Link to="/login">SUSPENSIONS</Link></li>
         </ul>      
