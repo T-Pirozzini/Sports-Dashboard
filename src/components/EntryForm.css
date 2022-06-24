@@ -1,11 +1,14 @@
 .entry-form {
   padding: 10px;
   display: flex;  
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 .entry-form > select {
   border: none;
+  color: rgb(242, 135, 29);
+  font-family: 'Goldman', cursive;
   font-size: 1.2rem;
 }
 
@@ -15,19 +18,23 @@
 
 .entry-form > input {  
   width: 200px;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
 .entry-form > button {
   border: none;
   border-radius: 6px;
-  color: white;
-  background-color: rgb(64, 65, 65);
+  font-family: 'Goldman', cursive;
+  font-size: 1.2rem;
+  color: rgb(3, 3, 3);
+  /* background-color: rgb(64, 65, 65); */
+  border: 2px solid rgb(242, 135, 29);
   padding: 10px;  
   transition: .5s ease;
 }
 
 .entry-form > button:hover {
-  background-color: rgb(94, 94, 94);
+  /* background-color: rgb(94, 94, 94); */
+  background-color: rgb(242, 135, 29);
   cursor: pointer;  
 }
