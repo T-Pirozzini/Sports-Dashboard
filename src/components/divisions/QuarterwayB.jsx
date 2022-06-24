@@ -15,7 +15,7 @@ export default function QuarterwayB({ quarterwayB }) {
   return (
     <> 
       {quarterwayB.map(quarter => (        
-        <tr key={quarter.id} onClick={() => handleClick(quarter.id)}>
+        <tr>
           <td>{quarter.team}</td>
           <td>{quarter.rep}</td>
           <td>{quarter.cell}</td>

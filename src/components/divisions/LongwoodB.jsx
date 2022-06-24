@@ -15,7 +15,7 @@ export default function LongwoodB({ longwoodB }) {
   return (
     <> 
       {longwoodB.map(long => (        
-        <tr key={long.id} onClick={() => handleClick(long.id)}>
+        <tr>
           <td>{long.team}</td>
           <td>{long.rep}</td>
           <td>{long.cell}</td>

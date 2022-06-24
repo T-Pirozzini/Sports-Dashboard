@@ -15,7 +15,7 @@ export default function LandlubberB({ landlubberB }) {
   return (
     <> 
       {landlubberB.map(lubber => (        
-        <tr key={lubber.id} onClick={() => handleClick(lubber.id)}>
+        <tr>
           <td>{lubber.team}</td>
           <td>{lubber.rep}</td>
           <td>{lubber.cell}</td>

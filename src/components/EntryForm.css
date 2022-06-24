@@ -6,10 +6,12 @@
   margin: 20px;
 }
 .entry-form > select {
-  border: none;
+  border: 2px solid rgb(242, 135, 29);
+  padding: 10px; 
   color: rgb(242, 135, 29);
-  font-family: 'Goldman', cursive;
-  font-size: 1.2rem;
+  font-family: 'Goldman', cursive;   
+  margin-right: 5px;
+  font-size: 1.2rem;  
 }
 
 .entry-form > input {

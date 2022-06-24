@@ -15,7 +15,7 @@ export default function WhitesailsB({ whitesailsB }) {
   return (
     <> 
       {whitesailsB.map(white => (        
-        <tr key={white.id} onClick={() => handleClick(white.id)}>
+        <tr>
           <td>{white.team}</td>
           <td>{white.rep}</td>
           <td>{white.cell}</td>
