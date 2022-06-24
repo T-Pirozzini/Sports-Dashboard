@@ -43,7 +43,7 @@ export default function EntryForm({ division }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="entry-form" onSubmit={handleSubmit}>
       <label>
         <span>Add a new entry:</span>
         <select onChange={(e) => setNewRec(e.target.value)}>
