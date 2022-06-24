@@ -68,7 +68,7 @@ export default function Divisions() {
     <div>
       <div className="container-main" >
         <div className="division-container">
-          <div className='1' ref={input} onClick={(e) => handleClick(e)} >
+          <div className='1 selected' ref={input} onClick={(e) => handleClick(e)} >
             <img src={landlubber}></img>
             <p>LANDLUBBER PUB DIVISION (REC)</p>            
           </div>
