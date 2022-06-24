@@ -43,7 +43,8 @@ td {
 th {  
   background-color: rgb(64, 65, 65);
   color: white;
-  padding: 10px; 
+  padding: 10px;
+  font-size: 1.5rem; 
 }
 .rec {
   background-color: rgb(230, 233, 233);
@@ -59,4 +60,11 @@ th {
   justify-content: flex-end;
   margin: 0px;
   padding: 0px;
+}
+.trash {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+.trash:hover {
+  color: rgb(242, 135, 29);
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsTrash } from 'react-icons/bs'
 
 // firebase imports
 import { db } from '../../firebase/config'
@@ -18,7 +19,8 @@ export default function LongwoodB({ longwoodB }) {
           <td>{long.team}</td>
           <td>{long.rep}</td>
           <td>{long.cell}</td>
-          <td>{long.email}</td>          
+          <td>{long.email}</td>
+          <div className="trash" key={long.id} onClick={() => handleClick(long.id)}><BsTrash /></div>          
         </tr>               
       ))}     
     </>

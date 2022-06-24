@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsTrash } from 'react-icons/bs'
 
 // firebase imports
 import { db } from '../../firebase/config'
@@ -18,7 +19,8 @@ export default function LandlubberB({ landlubberB }) {
           <td>{lubber.team}</td>
           <td>{lubber.rep}</td>
           <td>{lubber.cell}</td>
-          <td>{lubber.email}</td>          
+          <td>{lubber.email}</td>
+          <div className="trash" key={lubber.id} onClick={() => handleClick(lubber.id)}><BsTrash /></div>          
         </tr>               
       ))}     
     </>

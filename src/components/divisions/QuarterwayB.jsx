@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsTrash } from 'react-icons/bs'
 
 // firebase imports
 import { db } from '../../firebase/config'
@@ -18,7 +19,8 @@ export default function QuarterwayB({ quarterwayB }) {
           <td>{quarter.team}</td>
           <td>{quarter.rep}</td>
           <td>{quarter.cell}</td>
-          <td>{quarter.email}</td>          
+          <td>{quarter.email}</td>
+          <div className="trash" key={quarter.id} onClick={() => handleClick(quarter.id)}><BsTrash /></div>          
         </tr>               
       ))}     
     </>
