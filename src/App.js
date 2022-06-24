@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from "./pages/Home"
 import Divisions from "./pages/Divisions"
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 // components
 import Navbar from './components/Navbar';
@@ -26,14 +27,15 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />            
             <Route path="/divisions" element={<Divisions />} />
-            <Route path="/login">
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
               {/* {!user && <Login />} */}
               {/* {user && <Navigate to="/" />}  */}
-            </Route>
+            
           </Routes>
           <Footer />
         </BrowserRouter>
-       {/* )} */}
+        {/* )} */}
     </div>
   );
 }
