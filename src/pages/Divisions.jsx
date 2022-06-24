@@ -37,7 +37,7 @@ export default function Divisions() {
   const { documents: whitesailsB } = useCollection('whitesailsB')
   
   const [division, setDivision] = useState('landlubber')
-  const { user, authIsReady } = useAuthContext;  
+  const { user, authIsReady } = useAuthContext();  
 
   let unselected = document.querySelectorAll('.division-container > div')
 
@@ -227,7 +227,7 @@ export default function Divisions() {
             </tbody>
           </table>}
 
-          <EntryForm division = {division} />
+          {user && <EntryForm division = {division} />}
           </div>
         </div>      
       </div>

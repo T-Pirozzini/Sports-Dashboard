@@ -17,25 +17,24 @@ import { useAuthContext } from './hooks/useAuthContext';
 import './App.css';
 
 function App() {
-  const { user, authIsReady } = useAuthContext;
+  const { user, authIsReady } = useAuthContext();
 
   return (
     <div className="App">
-      {/* {authIsReady && ( */}
+      {authIsReady && (
         <BrowserRouter>
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />            
-            <Route path="/divisions" element={<Divisions />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-              {/* {!user && <Login />} */}
-              {/* {user && <Navigate to="/" />}  */}
-            
+            <Route path="/divisions" element={<Divisions />} />            
+            {/* <Route path="/login" element={user && <Navigate to="/" />} />    */}
+            <Route path="/login" element={!user && <Login />} />
+            {/* <Route path="/signup" element={user && <Navigate to="/" />} />            */}
+            <Route path="/signup" element={!user && <Signup />} />  
           </Routes>
           <Footer />
         </BrowserRouter>
-        {/* )} */}
+      )}
     </div>
   );
 }
