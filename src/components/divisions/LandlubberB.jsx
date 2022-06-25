@@ -19,7 +19,7 @@ export default function LandlubberB({ landlubberB }) {
   return (
     <> 
       {landlubberB.map(lubber => (        
-        <tr>
+        <tr key={lubber.id}>
           <td>{lubber.team}</td>
           <td>{lubber.rep}</td>
           <td>{lubber.cell}</td>

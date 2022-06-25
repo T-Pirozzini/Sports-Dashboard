@@ -19,7 +19,7 @@ export default function WhitesailsB({ whitesailsB }) {
   return (
     <> 
       {whitesailsB.map(white => (        
-        <tr>
+        <tr key={white.id}>
           <td>{white.team}</td>
           <td>{white.rep}</td>
           <td>{white.cell}</td>

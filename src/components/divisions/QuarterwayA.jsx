@@ -19,7 +19,7 @@ export default function QuarterwayA({ quarterwayA }) {
   return (
     <> 
       {quarterwayA.map(quarter => (        
-        <tr>
+        <tr key={quarter.id}>
           <td>{quarter.team}</td>
           <td>{quarter.rep}</td>
           <td>{quarter.cell}</td>

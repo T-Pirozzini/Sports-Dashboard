@@ -19,7 +19,7 @@ export default function LongwoodB({ longwoodB }) {
   return (
     <> 
       {longwoodB.map(long => (        
-        <tr>
+        <tr key={long.id}>
           <td>{long.team}</td>
           <td>{long.rep}</td>
           <td>{long.cell}</td>
