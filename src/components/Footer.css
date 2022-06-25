@@ -26,3 +26,31 @@
 .footer-container > ul > li:nth-child(1) {
   color: rgba(255, 255, 255, 0.372);
 }
+.mobile-footer-container {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .footer-container > ul > li {
+    display: none;
+  }
+  .mobile-footer-container {
+    display: flex;    
+    justify-content: space-around;   
+    background-color: rgb(12, 12, 12);
+    padding-bottom: 1rem; 
+  }
+  .mobile-footer-container > ul {
+    display: flex;    
+    list-style: none;    
+    color: white;
+    font-size: 3vw;
+  }
+  .mobile-footer-container > ul > li {
+    transition: color 0.2s ease;
+  }  
+  .mobile-footer-container > ul > li:hover {
+    color: rgba(255, 255, 255, 0.372);
+    cursor:auto;
+  }  
+}

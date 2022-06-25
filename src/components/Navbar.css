@@ -4,7 +4,7 @@
   width: 100%;  
   top: 0;  
 }
-.navigation{
+.navigation {
   display: flex;
   justify-content: space-around;
   align-items:center;  
@@ -40,4 +40,55 @@
   transform: scale(1.1);
   cursor: pointer;
   transition: .7s ease; 
+}
+
+@media (max-width: 500px) {  
+  .navigation > li {
+    /* display: none; */
+    
+  }
+  .hockey-logo { 
+    position: absolute;
+    top: 0;
+    padding: 0;
+    right: 30%; 
+    width: 35vw;   
+  }
+  .toggle-button {
+    position: absolute;
+    top: 1.75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 30px;
+  }
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .navbar-links {
+    /* display: none; */
+    width: 100%;
+  }
+  .navigation {
+    flex-direction: column;    
+    align-items: flex-start;    
+    width: 100%;    
+  }
+  .navigation > li {
+    font-size: 1rem;
+    display: none;
+    /* text-align: center; */
+  }
+  .navbar-links > li.active {
+    display: flex;
+  }
+  .navigation > li > a.active {
+    display: flex;
+  }
+  
 }

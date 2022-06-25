@@ -38,3 +38,18 @@
   text-align: center; 
   align-self: flex-end; 
 }
+
+@media (max-width: 500px) {
+  .img-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .img-container > div > div {
+    font-size: 10vw;
+  }
+  .img-container > div > p {
+    font-size: 4vw;
+    padding: 5px;
+  }  
+}

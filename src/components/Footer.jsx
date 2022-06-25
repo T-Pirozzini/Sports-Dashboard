@@ -33,6 +33,17 @@ export default function Footer() {
             <li>SUGGESTION REPORT</li>                    
           </ul>
         </div>
+        <div className="mobile-footer-container">
+          <ul>
+            <li>NEWS</li>            
+          </ul>
+          <ul>
+            <li>DIVISIONS</li>            
+          </ul>          
+          <ul>            
+            <li>REGISTRATION</li>                    
+          </ul>
+        </div>
       </div>
     </div>
   )
