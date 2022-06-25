@@ -25,12 +25,10 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<Home />} />            
-            <Route path="/divisions" element={<Divisions />} />            
-            {/* <Route path="/login" element={user && <Navigate to="/" />} />    */}
-            <Route path="/login" element={!user && <Login />} />
-            {/* <Route path="/signup" element={user && <Navigate to="/" />} />            */}
-            <Route path="/signup" element={!user && <Signup />} />  
+            <Route path="/" element={<Home />} />            
+            <Route path="/divisions" element={<Divisions />} />           
+            <Route path="/login" element={user ? <Navigate to='/' /> : <Login />} />            
+            <Route path="/signup" element={user ? <Navigate to='/' /> : <Signup />} />  
           </Routes>
           <Footer />
         </BrowserRouter>

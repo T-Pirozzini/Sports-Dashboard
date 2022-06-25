@@ -37,7 +37,7 @@ export default function Divisions() {
   const { documents: whitesailsB } = useCollection('whitesailsB')
   
   const [division, setDivision] = useState('landlubber')
-  const { user, authIsReady } = useAuthContext();  
+  const { user } = useAuthContext();  
 
   let unselected = document.querySelectorAll('.division-container > div')
 

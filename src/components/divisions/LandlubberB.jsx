@@ -5,7 +5,11 @@ import { BsTrash } from 'react-icons/bs'
 import { db } from '../../firebase/config'
 import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function LandlubberB({ landlubberB }) { 
+// context
+import { useAuthContext } from '../../hooks/useAuthContext'
+
+export default function LandlubberB({ landlubberB }) {
+  const { user } = useAuthContext(); 
 
  const handleClick = async (id) => {
   const docRef = doc(db, 'landlubberB', id)
@@ -20,7 +24,7 @@ export default function LandlubberB({ landlubberB }) {
           <td>{lubber.rep}</td>
           <td>{lubber.cell}</td>
           <td>{lubber.email}</td>
-          <div className="trash" key={lubber.id} onClick={() => handleClick(lubber.id)}><BsTrash /></div>          
+          {user && <div className="trash" key={lubber.id} onClick={() => handleClick(lubber.id)}><BsTrash /></div>}          
         </tr>               
       ))}     
     </>

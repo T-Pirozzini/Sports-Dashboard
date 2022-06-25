@@ -5,7 +5,11 @@ import { BsTrash } from 'react-icons/bs'
 import { db } from '../../firebase/config'
 import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function QuarterwayB({ quarterwayB }) {  
+// context
+import { useAuthContext } from '../../hooks/useAuthContext'
+
+export default function QuarterwayB({ quarterwayB }) {
+  const { user } = useAuthContext();  
 
  const handleClick = async (id) => {
   const docRef = doc(db, 'quarterwayB', id)
@@ -20,7 +24,7 @@ export default function QuarterwayB({ quarterwayB }) {
           <td>{quarter.rep}</td>
           <td>{quarter.cell}</td>
           <td>{quarter.email}</td>
-          <div className="trash" key={quarter.id} onClick={() => handleClick(quarter.id)}><BsTrash /></div>          
+          {user && <div className="trash" key={quarter.id} onClick={() => handleClick(quarter.id)}><BsTrash /></div>}          
         </tr>               
       ))}     
     </>

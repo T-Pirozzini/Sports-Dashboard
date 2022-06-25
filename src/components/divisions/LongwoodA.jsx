@@ -5,7 +5,11 @@ import { BsTrash } from 'react-icons/bs'
 import { db } from '../../firebase/config'
 import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function LongwoodA({ longwoodA }) {  
+// context
+import { useAuthContext } from '../../hooks/useAuthContext'
+
+export default function LongwoodA({ longwoodA }) {
+  const { user } = useAuthContext();  
 
  const handleClick = async (id) => {
   const docRef = doc(db, 'longwoodA', id)
@@ -20,7 +24,7 @@ export default function LongwoodA({ longwoodA }) {
           <td>{long.rep}</td>
           <td>{long.cell}</td>
           <td>{long.email}</td>
-          <div className="trash" key={long.id} onClick={() => handleClick(long.id)}><BsTrash /></div>          
+          {user && <div className="trash" key={long.id} onClick={() => handleClick(long.id)}><BsTrash /></div>}          
         </tr>               
       ))}     
     </>

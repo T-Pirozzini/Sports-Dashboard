@@ -5,7 +5,11 @@ import { BsTrash } from 'react-icons/bs'
 import { db } from '../../firebase/config'
 import { doc, deleteDoc } from 'firebase/firestore'
 
-export default function WhitesailsA({ whitesailsA }) {  
+// context
+import { useAuthContext } from '../../hooks/useAuthContext'
+
+export default function WhitesailsA({ whitesailsA }) {
+  const { user } = useAuthContext();  
 
  const handleClick = async (id) => {
   const docRef = doc(db, 'whitesailsA', id)
@@ -20,7 +24,7 @@ export default function WhitesailsA({ whitesailsA }) {
           <td>{white.rep}</td>
           <td>{white.cell}</td>
           <td>{white.email}</td>
-          <div className="trash" key={white.id} onClick={() => handleClick(white.id)}><BsTrash /></div>          
+          {user && <div className="trash" key={white.id} onClick={() => handleClick(white.id)}><BsTrash /></div>}          
         </tr>               
       ))}     
     </>
