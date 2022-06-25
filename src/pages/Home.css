@@ -16,3 +16,21 @@
 .home-title > div {
   margin-top: 300px;
 }
+
+@media (max-width: 500px) {
+  .main-container {
+    background-size: contain;
+    background-repeat:no-repeat
+  }
+  .home-title {
+    margin-left: 20px;
+  }
+  .home-title > div {
+    margin-top: 200px;
+    font-size: 2rem;
+  }
+  .img-main {
+    background-color: black;
+    padding: 0px;
+  }
+}

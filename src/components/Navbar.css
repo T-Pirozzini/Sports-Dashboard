@@ -48,8 +48,7 @@
   transition: .7s ease; 
 }
 
-@media (max-width: 500px) { 
-  
+@media (max-width: 500px) {   
   .hockey-logo { 
     position: absolute;
     top: 0;
