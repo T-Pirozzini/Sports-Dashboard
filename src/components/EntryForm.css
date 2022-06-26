@@ -1,9 +1,9 @@
 .entry-form {
   padding: 10px;
-  display: flex;  
+  display: flex;    
+  align-items: center;  
   border: 2px solid black;
-  border-radius: 6px;
-  margin: 20px;
+  border-radius: 6px; 
 }
 .entry-form > select {
   border: 2px solid rgb(242, 135, 29);
@@ -13,30 +13,80 @@
   margin-right: 5px;
   font-size: 1.2rem;  
 }
-
-.entry-form > input {
-  font-size: 1rem;
+.entry-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-
-.entry-form > input {  
-  width: 200px;
+.entry-inputs > input {  
+  font-size: 1rem;
+  margin: 5px;
+  width: 300px;
   margin-right: 5px;
 }
-
 .entry-form > button {
   border: none;
   border-radius: 6px;
   font-family: 'Goldman', cursive;
   font-size: 1.2rem;
-  color: rgb(3, 3, 3);
-  /* background-color: rgb(64, 65, 65); */
+  color: rgb(3, 3, 3);  
   border: 2px solid rgb(242, 135, 29);
   padding: 10px;  
   transition: .5s ease;
 }
-
-.entry-form > button:hover {
-  /* background-color: rgb(94, 94, 94); */
+.entry-form > button:hover {  
   background-color: rgb(242, 135, 29);
   cursor: pointer;  
+}
+
+@media (max-width: 1000px) { 
+  .entry-from {
+    margin-left: 1rem;
+  } 
+  .entry-form > select {
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-left: 1rem;
+  }
+  
+  .entry-form > button {    
+    padding: 5px;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .entry-form > select {
+    font-size: 1rem;
+    margin-left: .5rem;
+  }
+  .entry-inputs > input {  
+    font-size: 1rem;
+    margin: 5px;
+    width: 200px;
+    margin-right: 5px;
+  }
+  .entry-form > button {
+    font-size: 1rem;
+    padding: 5px;
+    margin-right: .5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .entry-form {
+   padding: 0px;
+   margin-bottom: 5px;
+  }  
+  .entry-inputs > input {  
+    font-size: .7rem;    
+    width: 150px;
+    margin-right: 5px;
+  }  
+  .entry-form > select {
+    padding: 0px
+  }
+  .entry-form > button {
+    padding: 0px;
+  }
 }

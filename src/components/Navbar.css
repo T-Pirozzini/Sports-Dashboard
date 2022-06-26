@@ -36,7 +36,8 @@
 }
 .hockey-logo {  
   width: auto;
-  height: 17vh;  
+  height: 17vh;
+  padding-top: 25px;  
 }
 .hockey-logo:hover {
   transform: scale(1.1);

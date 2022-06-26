@@ -50,35 +50,37 @@ export default function EntryForm({ division }) {
       <select onChange={(e) => setNewRec(e.target.value)}>
         <option value='A'>REC A</option>
         <option value='B'>REC B</option>
-      </select>         
-      <input
-        required
-        placeholder='Team Name'
-        type='text'
-        onChange={(e) => setNewTeam(e.target.value)}
-        value={newTeam}
-      />
-      <input
-        required
-        placeholder='Team Representative'
-        type='text'
-        onChange={(e) => setNewRep(e.target.value)}
-        value={newRep}
-      />
-      <input
-        required
-        placeholder='Contact# (xxx) xxx-xxxx'
-        type='cell'
-        onChange={(e) => setNewCell(e.target.value)}
-        value={newCell}
-      />
-      <input
-        required
-        placeholder='Email'
-        type='email'
-        onChange={(e) => setNewEmail(e.target.value)}
-        value={newEmail}
-      />
+      </select>
+      <div className='entry-inputs'>        
+        <input
+          required
+          placeholder='Team Name'
+          type='text'
+          onChange={(e) => setNewTeam(e.target.value)}
+          value={newTeam}
+        />
+        <input
+          required
+          placeholder='Team Representative'
+          type='text'
+          onChange={(e) => setNewRep(e.target.value)}
+          value={newRep}
+        />
+        <input
+          required
+          placeholder='Contact# (xxx) xxx-xxxx'
+          type='cell'
+          onChange={(e) => setNewCell(e.target.value)}
+          value={newCell}
+        />
+        <input
+          required
+          placeholder='Email'
+          type='email'
+          onChange={(e) => setNewEmail(e.target.value)}
+          value={newEmail}
+        />
+      </div> 
       <button>Add Team</button>
     </form>
   )

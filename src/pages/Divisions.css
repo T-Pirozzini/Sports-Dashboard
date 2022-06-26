@@ -43,7 +43,8 @@
 }
 table {  
   background-color: white;
-  padding: 5px;  
+  padding: 5px;
+  padding-left: 1rem;  
   width: 100%;  
 }
 caption {
@@ -52,7 +53,7 @@ caption {
 
 td {
   border: 1px solid rgb(5, 5, 5);
-  width: 25%;
+  width: 23%;
   padding: 5px;  
 }
 th {  
@@ -69,6 +70,8 @@ th {
 .trash {
   font-size: 1.5rem;
   padding-top: 10px;
+  padding-right: 1rem;
+  width: 8%;
 }
 .trash:hover {
   color: rgb(242, 135, 29);
@@ -87,7 +90,7 @@ th {
   }
   .division-container > div > p {
     display: none;
-  }
+  }  
   th {
     font-size: 1rem;
   }  
@@ -108,7 +111,12 @@ th {
     font-size: 1rem;
   }
   td {
-    font-size: .5rem;
+    font-size: .6rem;
     padding: 5px;
+  }
+  .trash {
+    font-size: 1rem;
+    padding: 0px;
+    padding-top: 10px;
   }
 }
