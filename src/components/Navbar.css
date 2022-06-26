@@ -8,8 +8,7 @@
   display: flex;
   justify-content: space-around;
   align-items:center;  
-  margin: 0px;
-  /* min-width: 80vw; */
+  margin: 0px;  
   height: 150px;     
   background-color: rgba(0, 0, 0, 0.802); 
 }
@@ -60,7 +59,7 @@
     right: 60%; 
     width: 25vw;
     height: auto;  
-  }
+  }  
   .toggle-button {
     position: absolute;
     top: 1.75rem;
@@ -70,6 +69,9 @@
     justify-content: space-between;
     width: 50px;
     height: 30px;
+    background-color: rgba(0, 0, 0, 0.802);
+    border: 1px solid white;
+    padding: 20px;    
   }
   .toggle-button .bar {
     height: 3px;
@@ -82,13 +84,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 4rem 1rem 0 0;
+    padding: 6rem 1rem 0 0;
     background-color: rgba(0, 0, 0, 0);    
   }
   .navigation > li {
     font-size: 1rem;
     display: none;    
-  }  
+  }
+  
   .navigation > li.active {
     display: flex;     
   }

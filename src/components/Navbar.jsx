@@ -26,12 +26,12 @@ export default function Navbar() {
   }
 
   return (    
-      <nav className="main-nav">
-        <a href="#" className="toggle-button" onClick={(e) => handleClick(e)}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </a>
+      <nav className="main-nav">        
+          <a href="#" className="toggle-button" onClick={(e) => handleClick(e)}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </a>        
         
           <ul className="navigation">
             <li>NEWS</li>
