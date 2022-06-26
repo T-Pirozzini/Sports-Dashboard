@@ -41,8 +41,7 @@ export default function Divisions() {
 
   let unselected = document.querySelectorAll('.division-container > div')
 
-  const handleClick = (e) => {
-    console.log('unselected', unselected)
+  const handleClick = (e) => {    
     let arr = Array.from(unselected)
     arr.map(x => {
       x.classList.remove('selected')

@@ -17,17 +17,35 @@
   margin-top: 300px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .main-container {
     background-size: contain;
-    background-repeat:no-repeat
+    background-repeat:no-repeat;    
   }
   .home-title {
     margin-left: 20px;
   }
   .home-title > div {
-    margin-top: 200px;
-    font-size: 2rem;
+    margin: 45% 0 0 0;    
+    font-size: 7vw;
+  }
+  .img-main {
+    background-color: black;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    background-size: contain;
+    background-repeat:no-repeat;    
+  }
+  .home-title {
+    margin-left: 20px;
+  }
+  .home-title > div {
+    margin: 45% 0 0 0;    
+    font-size: 7vw;
   }
   .img-main {
     background-color: black;

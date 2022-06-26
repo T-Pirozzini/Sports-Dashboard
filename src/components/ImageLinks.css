@@ -39,7 +39,22 @@
   align-self: flex-end; 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  .img-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .img-container > div > div {
+    font-size: 10vw;
+  }
+  .img-container > div > p {
+    font-size: 4vw;
+    padding: 5px;
+  } 
+}
+
+@media (max-width: 700px) {
   .img-container {
     flex-direction: column;
     padding: 1rem;

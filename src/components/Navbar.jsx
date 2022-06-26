@@ -16,8 +16,13 @@ export default function Navbar() {
   const { user } = useAuthContext()  
 
   const handleClick = (e) => {
-    const navigation = document.querySelector('.navigation');
-    navigation.classList.toggle('active')
+    const navigation = document.querySelectorAll('.navigation > li');
+    const background = document.querySelector('.navigation');    
+    let lis = Array.from(navigation)    
+    lis.map(li => {
+      li.classList.toggle('active')
+    })
+    background.classList.toggle('active')    
   }
 
   return (    
@@ -27,18 +32,19 @@ export default function Navbar() {
           <span className="bar"></span>
           <span className="bar"></span>
         </a>
-        <div className='logo-container'>
-          <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
-        </div>
+        
           <ul className="navigation">
             <li>NEWS</li>
             <li><Link to="/divisions">DIVISIONS</Link></li>          
-            <li></li>          
+            <div className='logo-container'>
+              <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
+            </div>                      
             <li>REGISTRATION</li>
             {/* {!user && <li><Link to="/signup">SIGNUP</Link></li>} */}
             {!user && <li><Link to="/login">LOGIN</Link></li>}
             {user && <li onClick={logout}>LOGOUT</li>}
-          </ul>      
+          </ul> 
+               
       </nav>       
   )
 }
