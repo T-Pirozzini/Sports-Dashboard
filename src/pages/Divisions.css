@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 0px 2rem 1rem 0px;
+  margin: 0px 0px 1rem 1rem;
 }
 .division-container > div > img {
   width: 120px;
@@ -18,38 +18,6 @@
 }
 .division-container > div > p {
   font-size: .8rem;
-}
-.table-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
-  align-items: center;
-  width: 60vw;
-}
-table {  
-  background-color: white;
-  padding: 10px;  
-  width: 100%;  
-}
-caption {
-  font-size: 3rem;
-}
-
-td {
-  border: 1px solid rgb(5, 5, 5);
-  padding: 10px;
-  width: 15vw; 
-}
-th {  
-  background-color: rgb(64, 65, 65);
-  color: white;
-  padding: 10px;
-  font-size: 1.5rem; 
-}
-.rec {
-  background-color: rgb(230, 233, 233);
-  color: rgb(64, 65, 65);
-  padding: 10px;
 }
 .selected {
   border-left: 4px solid rgb(242, 135, 29);
@@ -60,6 +28,40 @@ th {
   justify-content: flex-end;
   margin: 0px;
   padding: 0px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  width: 100vw;
+  margin: 0 1rem 
+}
+table {  
+  background-color: white;
+  padding: 5px;  
+  width: 100%;  
+}
+caption {
+  font-size: 3rem;
+}
+
+td {
+  border: 1px solid rgb(5, 5, 5);
+  width: 25%;
+  padding: 5px;  
+}
+th {  
+  background-color: rgb(64, 65, 65);
+  color: white;
+  padding: 5px;
+  font-size: 1.5rem; 
+}
+.rec {
+  background-color: rgb(230, 233, 233);
+  color: rgb(64, 65, 65);
+  padding: 5px;
 }
 .trash {
   font-size: 1.5rem;
