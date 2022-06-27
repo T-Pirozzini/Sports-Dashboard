@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Schedule.css"
+import "./Standings.css"
 
 export default function Schedule() {
   return (

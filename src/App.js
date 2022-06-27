@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from "./pages/Home"
 import News from './pages/News'
 import Divisions from "./pages/Divisions"
-import Schedule from './pages/Schedule'
+import Standings from './pages/Standings'
 import Report from './pages/Report'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -31,7 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/news" element={<News />} />            
             <Route path="/divisions" element={<Divisions />} />
-            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/standings" element={<Standings />} />
             <Route path="/report" element={<Report />} />
             <Route path="/login" element={user ? <Navigate to='/' /> : <Login />} />            
             <Route path="/signup" element={<Signup />} />  

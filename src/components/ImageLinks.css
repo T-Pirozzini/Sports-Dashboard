@@ -8,30 +8,30 @@
   justify-content: space-between;
   gap: 2rem;      
 }
-.img-container > div {  
+.img-container > a > div {  
   position: relative;
   transition: all .5s; 
   display: flex;
   justify-content: center; 
   align-items: center;   
 }
-.img-container > div:hover {
+.img-container > a > div:hover {
   filter: brightness(150%);
   cursor: pointer; 
   transform: scale(1.05); 
 }
-.img-container > div > img {  
+.img-container > a > div > img {  
   width: 100%;
   border-radius: 15px;  
   filter: brightness(60%); 
 }
-.img-container > div > div {  
+.img-container >a > div > div {  
   position: absolute; 
   color: white; 
   font-size: 3vw;  
   text-align: center;
 }
-.img-container > div > p {  
+.img-container > a > div > p {  
   position: absolute;
   color: white; 
   font-size: 1vw;

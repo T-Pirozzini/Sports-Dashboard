@@ -36,7 +36,7 @@ export default function Navbar() {
         <ul className="navigation">
           <li><Link to="/news">NEWS</Link></li>
           <li><Link to="/divisions">DIVISIONS</Link></li> 
-          <li><Link to="/schedule">SCHEDULE</Link></li>         
+          <li><Link to="/standings">STANDINGS</Link></li>         
           <div className='logo-container'>
             <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
           </div>                      
