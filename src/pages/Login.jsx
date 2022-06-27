@@ -19,7 +19,7 @@ export default function Login() {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          <span>email:</span>
+          <span>Email:</span>
           <input
             required
             type="email"
@@ -28,7 +28,7 @@ export default function Login() {
           />
         </label>
         <label>
-          <span>password:</span>
+          <span>Password:</span>
           <input
             required
             type="password"
@@ -36,7 +36,7 @@ export default function Login() {
             value={password}
           />
         </label>
-        <button>log in</button>
+        <button>Submit</button>
         {error && <p>{error}</p>}
       </form>
     </div>

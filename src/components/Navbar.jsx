@@ -16,7 +16,7 @@ export default function Navbar() {
   const { user } = useAuthContext()  
 
   const handleClick = (e) => {
-    const navigation = document.querySelectorAll('.navigation > li');
+    const navigation = document.querySelectorAll('.navigation li');
     const background = document.querySelector('.navigation');    
     let lis = Array.from(navigation)    
     lis.map(li => {
@@ -27,24 +27,26 @@ export default function Navbar() {
 
   return (    
       <nav className="main-nav">        
-          <a href="#" className="toggle-button" onClick={(e) => handleClick(e)}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </a>        
-        
-          <ul className="navigation">
-            <li>NEWS</li>
-            <li><Link to="/divisions">DIVISIONS</Link></li>          
-            <div className='logo-container'>
-              <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
-            </div>                      
-            <li>REGISTRATION</li>
-            {/* {!user && <li><Link to="/signup">SIGNUP</Link></li>} */}
-            {!user && <li><Link to="/login">LOGIN</Link></li>}
-            {user && <li onClick={logout}>LOGOUT</li>}
-          </ul> 
-               
+        <a href="#" className="toggle-button" onClick={(e) => handleClick(e)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </a>        
+      
+        <ul className="navigation">
+          <li>NEWS</li>
+          <li><Link to="/divisions">DIVISIONS</Link></li> 
+          <li>SCHEDULE</li>         
+          <div className='logo-container'>
+            <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
+          </div>                      
+          {!user && <li>REPORT</li>}
+          {user && <li>ADMIN</li>}
+          {!user && <li>REFEREE</li>}
+          {user && <li className='auth-links'><Link to="/signup">REGISTER</Link></li>}
+          {!user && <li><Link to="/login">LOGIN</Link></li>}
+          {user && <li className='auth-links' onClick={logout}>LOGOUT</li>}
+        </ul>                
       </nav>       
   )
 }

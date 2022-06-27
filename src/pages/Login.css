@@ -1,3 +1,27 @@
 .login-container, .signup-container {
-  margin: 300px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  height: 85vh;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+input {
+  margin: 10px;
+}
+button {
+  border: none;
+  border-radius: 6px;
+  font-family: 'Goldman', cursive;
+  font-size: 1.2rem;
+  color: rgb(3, 3, 3);  
+  border: 2px solid rgb(242, 135, 29);
+  padding: 5px;
+  margin: 5px;  
+  transition: .5s ease;
+}
+button:hover {  
+  background-color: rgb(242, 135, 29);
+  cursor: pointer;  
 }

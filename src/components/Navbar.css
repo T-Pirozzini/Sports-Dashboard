@@ -18,7 +18,7 @@
 .navigation > li {    
   color: white;
   font-size: 2rem;  
-  padding: 1vw;
+  padding: 3px;
   transition: color 0.2s ease;
   list-style: none;   
 }
@@ -34,6 +34,9 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.372);
 }
+/* .auth-links { */
+  /* background-color: black; */
+/* } */
 .hockey-logo {  
   width: auto;
   height: 17vh;
@@ -85,7 +88,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 6rem 1rem 0 0;
+    padding: 7rem 1rem 0 0;
     background-color: rgba(0, 0, 0, 0);    
   }
   .navigation > li {
