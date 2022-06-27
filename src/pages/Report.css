@@ -1,0 +1,35 @@
+.report-container {
+  display: flex;
+  flex-direction: column;
+  margin: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px; 
+}
+h1 {
+  align-self: center;
+  font-size: 3rem;
+}
+p {
+  width: 90%;
+  align-self: center;
+}
+.report-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.report-message {
+  display: flex;
+  flex-direction: column;
+}
+#subject {
+  width: 30%;
+}
+#comments {  
+  width: 90%
+}
+.form-btn {
+width: 10%;
+align-self: center;
+}

@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import News from './pages/News'
 import Divisions from "./pages/Divisions"
 import Schedule from './pages/Schedule'
+import Report from './pages/Report'
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
@@ -30,7 +31,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/news" element={<News />} />            
             <Route path="/divisions" element={<Divisions />} />
-            <Route path="/schedule" element={<Schedule />} />        
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/report" element={<Report />} />
             <Route path="/login" element={user ? <Navigate to='/' /> : <Login />} />            
             <Route path="/signup" element={<Signup />} />  
           </Routes>

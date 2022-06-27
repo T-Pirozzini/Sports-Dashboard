@@ -40,7 +40,7 @@ export default function Navbar() {
           <div className='logo-container'>
             <Link to="/"><img src={hockey_logo} alt="Nanaimo Adult Hockey League" className="hockey-logo" /></Link>      
           </div>                      
-          {!user && <li>REPORT</li>}
+          {!user && <li><Link to="/report">REPORT</Link></li>}
           {user && <li><Link to="/schedule">ADMIN</Link></li>}
           {!user && <li><Link to="/schedule">REFEREE</Link></li>}
           {user && <li className='auth-links'><Link to="/signup">REGISTER</Link></li>}
