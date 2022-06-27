@@ -25,3 +25,6 @@ button:hover {
   background-color: rgb(242, 135, 29);
   cursor: pointer;  
 }
+h2 {
+  font-size: 3rem;
+}

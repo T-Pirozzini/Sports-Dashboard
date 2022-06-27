@@ -39,7 +39,7 @@ export default function Signup() {
             value={password}
           />
         </label>
-        <button>submit</button>
+        <button>Submit</button>
         {error && <p>{error}</p>}
       </form>
     </div>
