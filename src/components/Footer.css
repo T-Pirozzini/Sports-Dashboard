@@ -16,10 +16,18 @@
 }
 .footer-container > ul > li {
   color: white;
-  transition: color 0.2s ease;
-  font-size: 1rem;
 }
 .footer-container > ul > li:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.372);
+}
+.footer-container > ul > li > a {
+  color: white;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.footer-container > ul > li > a:hover {
   color: rgba(255, 255, 255, 0.372);
   cursor: pointer;
 }
@@ -41,6 +49,11 @@
     display: flex;    
     list-style: none;    
     font-size: 3vw;
+    color: white;
+  }
+  .mobile-footer-container > ul:hover {
+    color: rgba(255, 255, 255, 0.372);
+    cursor: pointer;
   }
   .mobile-footer-container > ul > li > a {
     transition: color 0.2s ease;
