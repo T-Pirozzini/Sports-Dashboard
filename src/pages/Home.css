@@ -1,8 +1,7 @@
 .main-container {
   background-image: url('../assets/hockey-bg-main.jpeg');
   background-repeat: no-repeat;
-  background-size: cover; 
-  
+  background-size: cover;  
 }
 .home-title {
   display: flex;

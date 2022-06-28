@@ -17,7 +17,7 @@
 }
 .navigation > li {    
   color: white;
-  font-size: 2rem;  
+  font-size: 1.6rem;  
   padding: 3px;
   transition: color 0.2s ease;
   list-style: none;   
@@ -34,9 +34,6 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.372);
 }
-/* .auth-links { */
-  /* background-color: black; */
-/* } */
 .hockey-logo {  
   width: auto;
   height: 17vh;
@@ -50,7 +47,7 @@
 
 @media (max-width: 1000px) {
   .navigation > li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 

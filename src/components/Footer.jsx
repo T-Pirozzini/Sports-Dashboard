@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // styles
 import './Footer.css'
@@ -9,39 +10,31 @@ export default function Footer() {
       {/* footer */}
       <div className="footer-main">
         <div className="footer-container">
-          <ul className="about-footer">
-            <li>ABOUT</li>
-            <li>LATEST NEWS</li>
-            <li>CONTACT</li>
+          <ul className="about-footer">            
+            <li>NEWS</li>
+            <li>RULES/REGULATIONS</li>            
           </ul>
           <ul className="divisions-footer">
             <li>DIVISIONS</li>
-            <li>LANDLUBBER PUB DIVISION - (REC DIVISION)</li>
-            <li>QUARTERWAY PUB DIVISION - (30+ DIVISION)</li>
-            <li>LONGWOOD PUB DIVISION - (45+ DIVISION)</li>
-            <li>WHITE SAILS BREWING DIVISION - (55+ DIVISION)</li>
+            <li>STANDINGS</li>            
           </ul>
           <ul className="league-society">
-            <li>LEAGUE & SOCIETY</li>
-            <li>CONSTITUTION, BYLAWS, MINUTES & FINANCIALS</li>
-            <li>REFEREES SECTION</li>
-            <li>SUSPENSIONS</li>          
+            <li>REFEREE</li>
+            <li>REPORT</li>                     
           </ul>
           <ul className="contribute">
-            <li>WAYS TO CONTRIBUTE</li>
-            <li>TEAM COMPLAINTS</li>
-            <li>SUGGESTION REPORT</li>                    
+            <li>ADMIN LOGIN</li>                                
           </ul>
         </div>
         <div className="mobile-footer-container">
           <ul>
-            <li>NEWS</li>            
+            <li><Link to="/news">NEWS </Link></li>           
           </ul>
           <ul>
-            <li>DIVISIONS</li>            
+            <li><Link to="/divisions">DIVISIONS</Link></li>            
           </ul>          
           <ul>            
-            <li>REGISTRATION</li>                    
+            <li><Link to="/report">LOGIN</Link></li>                    
           </ul>
         </div>
       </div>

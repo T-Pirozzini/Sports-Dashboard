@@ -95,6 +95,18 @@ th {
     font-size: 1rem;
   }  
 }
+@media (max-width: 750px) {
+  caption {
+    font-size: 2rem;
+  }
+  th {
+    font-size: 1rem;
+  }
+  td {
+    font-size: .7rem;
+    padding: 5px;
+  }
+}
 
 @media (max-width: 600px) {
   .container-main {

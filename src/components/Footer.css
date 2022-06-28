@@ -17,14 +17,11 @@
 .footer-container > ul > li {
   color: white;
   transition: color 0.2s ease;
-  font-size: .8vw;
+  font-size: 1rem;
 }
 .footer-container > ul > li:hover {
   color: rgba(255, 255, 255, 0.372);
   cursor: pointer;
-}
-.footer-container > ul > li:nth-child(1) {
-  color: rgba(255, 255, 255, 0.372);
 }
 .mobile-footer-container {
   display: none;
@@ -43,14 +40,15 @@
   .mobile-footer-container > ul {
     display: flex;    
     list-style: none;    
-    color: white;
     font-size: 3vw;
   }
-  .mobile-footer-container > ul > li {
+  .mobile-footer-container > ul > li > a {
     transition: color 0.2s ease;
+    color: white;
+    text-decoration: none;
   }  
-  .mobile-footer-container > ul > li:hover {
+  .mobile-footer-container > ul > li > a:hover {
     color: rgba(255, 255, 255, 0.372);
-    cursor:auto;
+    cursor:pointer;
   }  
 }
