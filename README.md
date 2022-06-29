@@ -10,16 +10,13 @@ The divisions can be updated if logged in as an administrator in real-time. New 
 #### HTML/CSS/JS/REACT/FIREBASE
 
 ## :camera: Screenshots
-Dashboard
+### Dashboard
 ![dashboard](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/home.png?raw=true)
-&nbsp;
-Divisions - Contact information blocked out to protect privacy
+### Divisions - Contact information blocked out to protect privacy
 ![divisions](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/divisions.png?raw=true)
-&nbsp;
-Dashboard (mobile)
+### Dashboard (mobile)
 ![mobile-dashboard](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/mobile%20-%20home.png?raw=true)
-&nbsp;
-Divisions (mobile) - Contact information blocked out to protect privacy
+### Divisions (mobile) - Contact information blocked out to protect privacy
 ![mobile-divisions](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/mobile-divisions.png?raw=true)
 
 ## Personal Project:
