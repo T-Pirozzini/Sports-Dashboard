@@ -12,13 +12,14 @@ The divisions can be updated if logged in as an administrator in real-time. New 
 ## :camera: Screenshots
 Dashboard
 ![dashboard](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/home.png?raw=true)
+&nbsp;
 Divisions - Contact information blocked out to protect privacy
 ![divisions](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/divisions.png?raw=true)
+&nbsp;
 Dashboard (mobile)
-<br>
 ![mobile-dashboard](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/mobile%20-%20home.png?raw=true)
+&nbsp;
 Divisions (mobile) - Contact information blocked out to protect privacy
-<br>
 ![mobile-divisions](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/mobile-divisions.png?raw=true)
 
 ## Personal Project:
