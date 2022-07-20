@@ -9,6 +9,9 @@ The divisions can be updated if logged in as an administrator in real-time. New 
 
 #### HTML/CSS/JS/REACT/FIREBASE
 
+## :video_camera: Live Demo
+<a href="https://hockeydashboard-a443f.web.app/">Click Here!</a>
+
 ## :camera: Screenshots
 ### Dashboard
 ![dashboard](https://github.com/T-Pirozzini/Sports-Dashboard/blob/main/src/assets/home.png?raw=true)
